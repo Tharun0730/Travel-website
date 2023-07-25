@@ -1,0 +1,594 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+/* body {
+  overflow-y: hidden;
+} */
+main{
+    width: 100%;
+    height: 100vh;
+   background-image: url(./9307330.png);
+   background-color: #ff02ee89;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-position-y:px; */
+
+}
+main nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+        padding: 20px;
+        color: rgb(255, 255, 255);
+        align-items: center;
+        border-radius: 20px;
+        background-color: rgba(107, 107, 107, 0.639);
+        position: fixed;
+        z-index: 100;
+        top: 01%;
+        left: 02%;
+        width: 96%;
+        animation: nav 5s linear;
+        backdrop-filter: blur(5px);
+     
+      
+}
+main nav .container2 ul li a {
+  color: rgb(255, 255, 255);
+  line-height: 20px;
+  text-shadow: 0 0 rgb(255, 255, 255), 0 32px rgb(13, 247, 255);
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+/* main  container 2 hover method of the shadow display */
+main nav .container2 ul li a:hover {
+  color: rgb(13, 247, 255);
+  text-shadow: 0 -27px rgb(255, 255, 255), 0 0 rgb(13, 247, 255);
+}
+.fa-bars-staggered{
+  display: none;
+}
+nav input[type="checkbox"]{
+  display: none;
+}
+
+main nav h1{
+   color: rgb(255, 255, 255);
+}
+main nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0 10px;
+  
+}
+
+main nav .container2 ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+  }
+  
+
+  main nav .container2 ul li {
+    margin: 0px 20px;
+    font-size: 20px;
+    font-family: "Libre Baskerville", serif;
+    padding: 05px;
+    color: white;
+
+
+  }
+  main nav .container2 ul li a{
+    color: white;
+  }
+  main nav .container2 .sign{
+     
+    border-radius: 10%;
+  
+  }
+ 
+  main nav .container2 .sign a{
+    
+    background-color: rgb(0, 155, 194);
+    padding: 5px 10px;
+    border-radius: 50px;
+    
+  }
+  section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+     /* flex-wrap: wrap; */
+     perspective: 1000px;
+    padding-top: 80px;
+    position: relative;
+    /* margin-top: 0px; */
+  
+  }
+  section .container1{
+    height: 450px;
+    width: min(100%,500px);
+   background-color: rgba(144, 0, 255, 0.78);
+   backdrop-filter: blur(50px);
+   /* animation: sliderleft 3s linear ; */
+   border-radius: 10% 0% 0% 10%;
+   overflow: hidden;
+    
+
+  }
+
+
+
+
+  section .container1 img{
+    height: 450px;
+    width: 500px;
+    object-fit: fill;
+  }
+  main section .container2 h4{
+
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+.card{
+  position: relative;
+   height: 450px;
+    width: min(100%,550px);
+    transform-style: preserve-3d;
+  transition: all 2s;
+  border-radius: 0px 10% 10% 0px; 
+  /* overflow: hidden; */
+ 
+
+
+}
+section>input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"]:checked~.card{
+  transform: rotateY(180deg);
+  transition: all 1s;
+
+
+}
+
+
+  section .container2{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+    /* position: relative; */
+    position: absolute;
+    top:0;
+    /* right:11%; */
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+    /* animation: sliderright 3s linear   ; */
+    border-radius: 0px 10% 10% 0px; 
+    backface-visibility: hidden;
+
+   
+    
+  }
+  @keyframes sliderleft {
+    0%{
+      margin-left: (100%);
+       }
+       100%{
+        margin-left: (0%);
+       }
+    
+}
+ @keyframes sliderright{
+    /* 0%{
+        position: absolute;
+       right: 30.5%;
+    } 
+    100%{
+        position: absolute;
+        right: 11%;
+     
+    } 
+    */
+    0%{
+      margin-left:-100%;
+       }
+       100%{
+        margin-left:0%;
+       }
+    
+  }
+  
+  section .container2::after{
+
+    content: ' welcome to Travel';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./woman-standing-wat-phra-that-pha-son-kaew-temple-khao-kho-phetchabun-thailand.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    animation: bgcover 4s linear;
+    /* animation-delay:8s; */
+    left: 200%;
+
+    
+  }
+@keyframes bgcover {
+    0%{
+        left: 0%;
+    }
+    40%{
+      left: 0%;
+
+    }
+    100%{
+        left:100%;
+    }
+    
+}
+
+  section .container2 form{
+    margin-top: 10px;
+    width: 300px;
+  }
+  section .container2 .input{
+    display: flex;
+    /* width: min(100%,350px); */
+    /* width: 100%; */
+
+   width:350px;
+    border: 1px solid;
+    border-radius: 20px;
+    outline: none;
+    margin: 15px 0px;
+    background-color: white;
+  
+    
+    
+
+  }
+  section .container2 .input i{
+    text-align: center;
+    padding: 06px;
+    margin-right: 03px;
+    
+
+  }
+  section .container2 div{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+  
+
+  section .container2 div input[type='text']{
+    width: 100%;
+
+     border: 0px;
+     outline: none;
+   
+     
+
+  }
+  section .container2 div input[type='password']{
+    width: 100%;
+  
+    border: 0px;
+    outline: none;
+   
+
+  }
+  section .container2 button{
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: rgb(0, 155, 194);
+    /* padding: 05px; */
+    border: 0px;
+    color: white;
+    margin-top: 10px;
+  }
+
+
+
+  .ps-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 05px 0px !important;
+    flex-wrap: wrap;
+
+  }
+  .container2-title{
+    position: absolute;
+    top:03%;
+    left: 0;
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 0px 20px 20px 0px;
+    animation: title 5s linear ;
+  }
+  @keyframes title {
+    0%,70%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+
+    }
+    
+  }
+  .section-back{
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(50px);
+     width: 100%;
+     height: 100%; 
+    padding-inline: 20px;
+     position: absolute;
+     top:0;
+     transform: rotatey(180deg);
+     backface-visibility: hidden;
+     border-radius: 0px 10% 10% 0px;
+
+     
+}
+.section-back .container-1{
+     display: grid;
+    grid-template-columns: auto auto;
+    gap:10px;
+    width:100%;
+    margin-bottom:0px;
+    font-size:medium;
+
+}
+.section-back .container-1 div{
+  border-radius: 20%;
+  width: min(100%,250px);
+  border: 0px;
+
+}
+.section-back .container-2{
+    display: flex;
+    width:100%;
+    padding: 10px;
+    /* margin: 05px; */
+}
+.section-back h4{
+  padding: 05px 10px; 
+
+}
+.section-back .container-2 label{
+    padding: 05px;
+}
+.section-back label{
+    padding: 10px;
+   
+}
+.section-back input{
+    /* width: min(100%,200px); */
+    padding: 10px;
+    width: 100%;
+   
+    /* border: 1px solid; */
+    margin: 10px;
+}
+.section-back .container-2 input{
+    margin: 0px;
+    vertical-align: middle;
+}
+.section-back input[type=radio]{
+    width: auto;
+    
+
+}
+.section-back h3{
+    text-align: center;
+    padding: 20px 0px;
+}
+.section-back .container-2>div{
+    text-align: center;
+    margin-right:10px;
+}
+.section-back .button{
+   text-align: center;
+   
+}
+
+.section-back button{
+    margin: 05px;
+    width: min(90%,300px);
+
+    text-align: center;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    padding: 05px;
+    background-color: rgb(13, 13, 13);
+    border-radius: 20px;
+    color: white;
+
+}
+.section-back button:hover{
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+
+}
+@media screen and (min-width:320px) and (max-width:700px) {
+
+
+  main{
+    height: auto;
+    padding-top: 20%;
+  }
+  main  nav{
+    top:3%;
+  }
+  main  nav .container2 input[type="checkbox"]:checked~.slider {
+    left: 0;
+  }
+
+  main  nav .fa-bars-staggered {
+    display: block;
+  }
+  
+  main  nav .container2{
+    position: fixed;
+    width: 100%;
+    left: -200%;
+    top: 110%;
+  }
+
+  main  nav .container2 ul {
+    flex-direction: column;
+  
+    position: fixed;
+    width: 100%;
+    left: -200%;
+    top: 110%;
+    transition: all 2s ease-out;
+    /* left: 0; */
+    width: 100%;
+    background-color: rgba(222, 175, 255, 0.967);
+    padding-bottom: 10px;
+    backdrop-filter: blur(5px);
+    color: rgb(255, 255, 255);
+  }
+  main  nav input[type="checkbox"]{
+    display: none;
+  }
+
+  main  nav .container2 ul li {
+    margin: 23px 0px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  main  nav .container2 ul li a {
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    line-height: 20px;
+    text-shadow: 0 0 rgb(255, 255, 255), 0 50px rgb(13, 247, 255);
+    transition: all 0.4s;
+    width: 100%;
+  }
+
+  main  nav .container2 ul li a:hover {
+    overflow: hidden;
+    color: rgb(13, 247, 255);
+    text-shadow: 0 -27px rgb(255, 255, 255), 0 0 rgb(13, 247, 255);
+  }
+  section{
+    flex-direction: column;
+    padding: 20px;
+  }
+  section .card{
+    border-radius: 0;
+
+  }
+  section .container2 form{
+    margin-top: 10px;
+    width:min(100%,300px)
+  }
+  section .container1{
+    border-radius: 0;
+    width: 100%;
+
+  }
+  section .container2 .input{
+    width: min(100%,350px);
+  }
+  section .card .container2{
+    border-radius: 0;
+
+  }
+  section .card .section-back{
+    border-radius: 0;
+
+  }
+  .container2-title{
+    position: absolute;
+    top:01%;
+    left: 0;
+    padding: 05px;
+    background-color: aquamarine;
+   
+  }
+  .card{
+    width:100%;
+  }
+    .section-back .container-1{
+          
+
+        height: 200px;
+        width: 100%;
+        grid-template-columns: auto;
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        text-align: center;
+        justify-content: center;
+       place-items: center;
+       gap: 0px;
+        
+         
+
+
+    }
+    .section-back .container-1 div{
+      width:100%;
+
+    
+    }
+    .section-back input{
+        width: min(90%,400px);
+        padding: 05px;
+        margin: 10px;
+    }
+    .section-back .container-2{
+    flex-wrap: wrap;
+   }
+   .section-back .container-2>div{
+      text-align: left;
+    width: 70%;
+    
+   }
+   .section-back .container-2 input{
+    margin: 10px 0px;
+   }
+   input[type="checkbox"]:checked~.card{
+    transform: rotateZ(180deg) rotatex(180deg);
+    transition: all 1s;
+  
+  
+  }
+}
+@media screen and (min-width:600px) and (max-width:900px){
+
+
+}

@@ -1,0 +1,2332 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Libre+Baskerville:ital@0;1&display=swap");
+
+* {
+  /* font-family: 'Libre Baskerville', serif; */
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  cursor: default;
+  text-decoration: none;
+  scroll-behavior: smooth;
+
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>") 16 0, auto; */
+}
+
+html {
+  scroll-behavior: smooth;
+
+
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --bg2: rgb(0, 0, 0);
+  --blue: rgb(10, 133, 137);
+  --bg: linear-gradient(30deg, #f32170, #ff6b08, #cf23cf, #ff2744);
+}
+
+/* starting page of the web which have nav and background video with the height of vh */
+
+header {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/*starting page background video which cover the full screen*/
+header video {
+  height: 100vh;
+  object-fit: cover;
+
+  width: 100%;
+}
+
+/* nav bar which have the poisition of fixed at the top th page */
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(107, 107, 107, 0.522);
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  left: 02%;
+  width: 96%;
+  animation: nav 5s linear;
+  backdrop-filter: blur(5px);
+  /* animation-delay: 2s; */
+}
+
+.fly {
+  display: flex;
+  position: absolute;
+  right: -50%;
+  top: 28px;
+  animation: fly 5s linear;
+  /* animation-delay: 200ms; */
+
+}
+
+.fly img {
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+
+}
+
+.fly p {
+  padding: 10px 0px;
+  text-align: center;
+  font-weight: bolder;
+  color: #ffffff;
+  font-size: larger;
+}
+
+
+@keyframes fly {
+  0% {
+
+    transform: translate(-490%);
+    backdrop-filter: blur(0px);
+
+
+  }
+
+  100% {
+    right: -30%;
+
+  }
+
+}
+
+@keyframes nav {
+  0% {
+    transform: translate(-130%);
+    background-color: rgb(255, 255, 255);
+
+
+
+  }
+
+  100% {
+    transform: translate(0);
+
+  }
+
+}
+
+/* arrangement of the nav content using flex senter */
+header nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .container1 {
+  margin-right: 30px;
+}
+
+/* title name  */
+header nav .container1 h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+header nav .container1 i {
+  padding: 0px 05px;
+}
+
+/* nav conatiner list */
+header nav .container2 ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  /* overflow hidden for shadow which on hover */
+  overflow: hidden;
+}
+
+/* nav conatiner list */
+header nav .container2 ul li {
+  margin: 0px 20px;
+  font-size: 20px;
+  font-family: "Libre Baskerville", serif;
+  /* border-bottom: 1px transparent; */
+  padding: 05px;
+}
+
+/* menu bar for mobile screen which have been display none */
+header nav .container2 input[type="checkbox"] {
+  display: none;
+}
+
+/* header container 2 */
+header nav .container2 ul li a {
+  color: rgb(255, 255, 255);
+  line-height: 20px;
+  text-shadow: 0 0 rgb(255, 255, 255), 0 32px rgb(13, 247, 255);
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+/* header container 2 hover method of the shadow display */
+header nav .container2 ul li a:hover {
+  color: rgb(13, 247, 255);
+  text-shadow: 0 -27px rgb(255, 255, 255), 0 0 rgb(13, 247, 255);
+}
+
+/* hear icon hover color */
+header nav .container3 .fa-heart:hover {
+  color: red;
+}
+
+/* user hover icon */
+header nav .container3 .fa-user-circle:hover {
+  color: #0092e6;
+}
+
+/* display of none the menu icon for mobile screen usage */
+header nav .container3 .fa-bars-staggered {
+  display: none;
+}
+
+#id {
+  display: none;
+}
+
+/* nav container3 */
+header nav .container3 {
+  width: 300px;
+  justify-content: end;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+header nav .container3 i {
+  margin: 0px 10px;
+}
+
+header nav .container3 a i {
+  color: white;
+  text-align: center;
+}
+
+/* search bar div */
+header nav .container3 .search {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+
+/* diplay none for data list arrow symbol */
+[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+/* search bar input with 100% of width so that it flex with the parent conatiner */
+header nav .container3 input[type="search"] {
+  outline: none;
+  border: 0px;
+  width: 100%;
+  /* margin-left: 20px; */
+  background-color: transparent;
+  border-radius: 0px;
+  height: 100%;
+}
+
+/* alline the placeholder text */
+header nav.container3 input[type="search"]::placeholder {
+  text-align: center;
+}
+
+/* check box for search which is used to open the search container */
+header nav .container3 input[type="checkbox"] {
+  display: none;
+}
+
+/* when the input was checked the input search will have width of its parent */
+header nav .container3 input[type="checkbox"]:checked~.search {
+  width: min(100%, 500px);
+  background-color: rgb(255, 255, 255);
+  padding-left: 20px;
+  color: var(--blue);
+}
+
+/* header of content which position of absolute in the video  */
+.header-1 .container1 {
+  width: 50%;
+  display: flex;
+  animation: content 5s linear;
+  animation-delay: 150ms;
+  padding: 10px;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  /* background-color: rgba(255, 255, 255, 0.756); */
+  transform: translate(10%, -50%);
+  font-family: "Libre Baskerville", serif;
+  overflow: hidden;
+}
+
+@keyframes content {
+  0% {
+
+    /* transform: translate(-100%, -50%); */
+    opacity: 0;
+
+
+  }
+
+  100% {
+    opacity: 0;
+
+  }
+
+}
+
+/* style of header conatainer */
+.header-1 .container1 h1 {
+  padding: 05px 0px;
+  color: #ffffff;
+  font-size: 80px;
+  /* -webkit-text-stroke: 1px white; */
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: -750px 0;
+  animation: backcolor1 15s linear;
+  animation-delay: 4s;
+  font-weight: bolder;
+  font-family: popins, sans-serif;
+
+}
+
+/* animation of heading h1 */
+@keyframes backcolor1 {
+
+  0% {
+    color: transparent;
+    background-position: -750px 0;
+  }
+
+  25% {
+    color: transparent;
+    background-position: -400px 0;
+  }
+
+  50% {
+
+    background-position: 0 0;
+    color: transparent;
+  }
+
+  75% {
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    background-position: -750px 0;
+    color: transparent;
+  }
+
+  100% {
+    background-position: 0 0;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: transparent;
+  }
+}
+
+@keyframes backcolor2 {
+  from {
+    color: transparent;
+  }
+
+  to {
+    color: transparent;
+    background-position: 0 0;
+  }
+}
+
+.header-1 .container1 h5 {
+  color: white;
+  animation: backcolor 10s alternate;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: -750px 0;
+  animation: backcolor2 20s alternate;
+  animation-delay: 4s;
+  font-family: popins, sans-serif;
+}
+
+.header-1 .container1 p {
+  padding: 10px 0px;
+  color: #ffffff;
+  font-size: 20px;
+  animation: backcolor2 20s alternate;
+  background-image: linear-gradient(white, white);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: -750px 0;
+  animation-delay: 4s;
+
+  font-family: popins, sans-serif;
+}
+
+.header-1 .container1 span {
+  padding: 10px 0px;
+  animation: travelbutton 6s linear;
+  /* animation-delay: 0s; */
+  overflow: hidden;
+  width: fit-content;
+
+
+
+}
+
+.header-1 .container1 span a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* border-left: 2px solid black; */
+  border-radius: 05px;
+  background-color: var(--blue);
+  top: 0;
+  left: 500%;
+  animation: trvelbuttonflight 6s;
+  transition: all 2;
+  animation-delay: 5s;
+}
+
+.header-1 .container1 span a img {
+  position: absolute;
+  z-index: 200;
+  width: 30px;
+  height: 30px;
+  top: 17%;
+  left: 500%;
+  animation: trvelbuttonflight2 6s;
+  animation-delay: 5s;
+
+}
+
+@keyframes trvelbuttonflight2 {
+  0% {
+    left: 0;
+
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes trvelbuttonflight {
+  0% {
+    left: 0;
+
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes travelbutton {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  80% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+}
+
+.header-1 .container1 span a {
+  color: white;
+  padding: 10px;
+  border-radius: 05px;
+  background-color: var(--blue);
+  position: relative;
+}
+
+.header-1 .container2 {
+  position: absolute;
+  color: white;
+  bottom: 09%;
+  left: 05%;
+  animation: content2 5s linear;
+}
+
+@keyframes content2 {
+  0% {
+
+    transform: translate(-100%, -50%);
+    opacity: 0;
+
+
+  }
+
+  100% {
+    opacity: 0;
+
+  }
+
+}
+
+.header-1 .container2 i {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.fa-facebook:hover {
+  color: blue;
+}
+
+.fa-instagram:hover {
+  color: rgb(255, 0, 85);
+}
+
+.fa-twitter:hover {
+  color: rgb(39, 219, 255);
+}
+
+.fa-linkedin:hover {
+  color: rgb(13, 0, 255);
+}
+
+/* animation rotate */
+
+
+.rotate-box {
+
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  bottom: 02%;
+  right: 01%;
+  border-radius: 50%;
+  /* background-color: #0092e6; */
+  overflow: hidden;
+  animation: rotate 2s linear infinite;
+  z-index: 500;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.rotate-box-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* background-color: #e2e600; */
+
+
+
+}
+
+.rotate-box-container img {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 1%;
+  left: 30%;
+  animation: rotate2 5s linear;
+
+
+
+
+}
+
+@keyframes rotate2 {
+  0% {
+    right: -10%;
+    opacity: 0;
+
+  }
+
+  100% {
+    right: 04%;
+    opacity: 0;
+
+  }
+
+}
+
+/* banner section */
+.heading {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  /* background-color: black; */
+  padding: 05px;
+  font-family: "Libre Baskerville", serif;
+  border-radius: 20px;
+  margin: 10px 0px;
+  font-weight: bolder;
+
+}
+
+.heading h2,
+p {
+  padding: 05px;
+}
+
+.heading h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: cadetblue;
+}
+
+/* banner section */
+.banner-section {
+  width: 100%;
+  color: white;
+  background-color: var(--bg2);
+  padding: 20px;
+
+
+}
+
+/* banner section of banner-1 */
+.banner-section .banner-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 20px;
+  /* width: 100%; */
+  /* padding: 20px; */
+}
+
+/* banner section of banner-1 img*/
+.banner-section .container1 img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10%;
+  width: 50%;
+  padding: 10px;
+  animation-delay: 20s;
+}
+
+/* banner section of conatiner-1 */
+.banner-section .container1 {
+  display: flex;
+  /* width:min(100%,600px); */
+  gap: 10px;
+  width: 50%;
+}
+
+/* banner section of conatiner-2 */
+.banner-section .container2 {
+  padding: 20px;
+  width: 50%;
+}
+
+/* banner section img of container-1 of first child */
+.banner-section .container1 img:first-child {
+  top: 1rem;
+  position: relative;
+}
+
+/* banner section img of container-1 of last child */
+
+.banner-section .container1 img:last-child {
+  bottom: 1rem;
+  position: relative;
+}
+
+/* banner section h1 and p and span style */
+
+.banner-section .container2 h1 {
+  font-size: 30px;
+  padding: 05px;
+  margin-bottom: 10px;
+}
+
+.banner-section .container2 h3 {
+
+  padding: 10px;
+  margin-top: 20px;
+  /* color: black; */
+}
+
+.banner-section .container2 a {
+  background-color: var(--blue);
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+}
+
+.banner-section .banner-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 50px 20px;
+
+  /* width: 100%; */
+  /* padding: 20px; */
+}
+
+/*features section */
+.Features-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg2);
+}
+
+/*features section  container1*/
+.Features-section .container1 {
+  width: 50%;
+  padding: 10px;
+  color: white;
+}
+
+/*features section  container1 element style*/
+
+
+
+.Features-section .container1 h1 {
+  font-size: 30px;
+  color: var(--blue);
+
+}
+
+.Features-section .container1 .sub-conatiner1 {
+  display: flex;
+  margin: 20px 0px;
+  align-items: center;
+}
+
+.Features-section .container1 .sub-conatiner1 span {
+  padding: 05px;
+
+}
+
+/*features section  container1 img*/
+.Features-section .container1 h3 {
+  padding: 10px;
+}
+
+.Features-section .container1 h1 {
+  padding: 10px;
+}
+
+.Features-section .container1 img {
+  width: 80px;
+
+  vertical-align: middle;
+}
+
+.Features-section .container2 {
+  width: 50%;
+}
+
+/* Features-section container2 div */
+.Features-section .container2 div {
+  text-align: center;
+  padding: 0px 10px;
+
+}
+
+/* Features-section container2 div  img*/
+.Features-section .container2 img {
+  width: 45%;
+
+  height: 250px;
+}
+
+.Features-section .container2 .imgf {
+  border-radius: 0px 30%;
+}
+
+.Features-section .container2 .imgl {
+  border-radius: 30% 0px;
+}
+
+/* video conatiner */
+
+/* video section div have full view port width so that the video cover the full screen and the overflow are hidden */
+.videosection {
+  width: 100vw;
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* video conatiner  the width and height are inherit with the parent div  and object are fit-fill*/
+
+.videosection video {
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
+  /* box-shadow: -30px 30px 10px black; */
+
+
+
+}
+
+/* video conatiner wholecontaine the width are 100% and  overflow are hiden of the video and which flex so that the video are come in row  */
+.videosection .wholecontainer {
+  display: flex;
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  /* width: min(100%, 1230px); */
+}
+
+/* give the input radio none and the image are label which will function as radio instead of radio button */
+
+.videosection input[type="radio"] {
+  display: none;
+}
+
+/* The parent div of image which have the fixed width the extra are over flow in x direction base */
+.videosection .imgcontainer {
+  width: 70%;
+  height: fit-content;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: end;
+  /* opacity: 80%; */
+  /* border: 1px solid; */
+}
+
+/* hidding the scroll bar  */
+.videosection .imgcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* image conatiner which have two div  */
+.videosection .imgcontainer .main-conatiner {
+  width: 230px;
+  height: 250px;
+  /* border: 1px solid; */
+  position: relative;
+  margin: 0px 30px 20px 30px;
+  margin-top: 0;
+  padding: 05px;
+
+}
+
+.videosection .imgcontainer .main-conatiner .container1 {
+  width: 100%;
+  height: 100%;
+
+}
+
+.videosection .imgcontainer .main-conatiner .container1 img {
+  margin: 0px;
+  width: 230px;
+  height: 250px;
+  object-fit: cover;
+  overflow-y: hidden;
+}
+
+/* the second div of the image have position of absolute and bottom value the extra of the div are hiden */
+.videosection .imgcontainer .main-conatiner .container2 {
+  width: 100%;
+  position: absolute;
+  top: 89%;
+  padding: 05px;
+  /* border: 1px solid; */
+  transition: all 2s;
+  background-color: rgb(255, 255, 255);
+
+}
+
+/* when we hover the parent the second conatiner will come ono the top  */
+.videosection .imgcontainer .main-conatiner:hover .container2 {
+  top: 46%;
+
+
+}
+
+/* styling the conatiner2 and conatiner1 of the video section */
+.videosection .imgcontainer .main-conatiner .container2 h4 {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+
+
+
+}
+
+.videosection .imgcontainer .main-conatiner .container2 p {
+  text-align: center;
+}
+
+.videosection .imgcontainer .main-conatiner .container2 a {
+  background: var(--blue);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 07px;
+
+}
+
+.videosection .imgcontainer .main-conatiner .container2 h3 {
+  text-align: center;
+  font-weight: bolder;
+  color: var(--blue);
+  padding: 10px 0px;
+  background-color: white;
+  text-transform: uppercase;
+
+
+}
+
+/* the radio button chechke with the accounding to the number  the margin-left values are given */
+.videosection #img1:checked~.wholecontainer .video1 {
+  margin-left: 0%;
+  transition: all 1s;
+}
+
+.videosection #img2:checked~.wholecontainer .video1 {
+  margin-left: -100%;
+  transition: all 1s;
+}
+
+.videosection #img3:checked~.wholecontainer .video1 {
+  transition: all 1s;
+  margin-left: -200%;
+}
+
+.videosection #img4:checked~.wholecontainer .video1 {
+  margin-left: -300%;
+  transition: all 1s;
+}
+
+.videosection #img5:checked~.wholecontainer .video1 {
+  margin-left: -400%;
+  transition: all 1s;
+}
+
+.videosection #img6:checked~.wholecontainer .video1 {
+  margin-left: -500%;
+  transition: all 1s;
+}
+
+.videosection #img7:checked~.wholecontainer .video1 {
+  margin-left: -600%;
+  transition: all 1s;
+}
+
+.videosection #img8:checked~.wholecontainer .video1 {
+  margin-left: -700%;
+  transition: all 1s;
+}
+
+.videosection #img9:checked~.wholecontainer .video1 {
+  margin-left: -800%;
+  transition: all 1s;
+}
+
+.videosection #img10:checked~.wholecontainer .video1 {
+  margin-left: -900%;
+  transition: all 1s;
+}
+
+/* the arrow of the scroll */
+.videosection .leftarrow {
+  position: absolute;
+  background-color: #000000;
+  top: 70%;
+  left: 13%;
+  padding: 05px 10px;
+  visibility: hidden;
+  border-radius: 50%;
+
+}
+
+.videosection .rightarrow {
+  position: absolute;
+  background-color: #000000;
+  top: 70%;
+  right: 13%;
+  padding: 05px 10px;
+  visibility: hidden;
+  border-radius: 50%;
+
+}
+
+.videosection .leftarrow i {
+  font-size: larger;
+  color: white;
+}
+
+.videosection .rightarrow i {
+  font-size: larger;
+  color: white;
+}
+
+.videosection:hover .rightarrow {
+  visibility: visible;
+}
+
+.videosection:hover .leftarrow {
+  visibility: visible;
+}
+
+/* flip cards format */
+.flip-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--bg2);
+  padding: 40px 10px;
+}
+
+/* the whole conatiner which have all the three cards */
+.flip-card .wholecontainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* padding: 20px; */
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.flip-card h2 {
+  padding-top: 20px;
+}
+
+.flip-card p {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* main-conatner which have card child and grandchild of front and back card div */
+.flip-card .main-conatiner {
+
+  height: 350px;
+  /* position: relative; */
+  width: 300px;
+  perspective: 1000px;
+  /* near screen motion */
+  padding: 10px;
+
+
+
+}
+
+.flip-card .main-conatiner:hover .card {
+  transform: rotateY(180deg);
+  transition: all 1s;
+}
+
+/* giving the card 3d which ake the back and front card 3d */
+.card {
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s;
+}
+
+/* the front and back card should absolute with the card div*/
+.front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+
+}
+
+/* front card */
+.front-card img {
+  width: inherit;
+  height: inherit;
+  border-radius: 10%;
+}
+
+/* back card */
+.back-card {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  transform: rotateY(180deg);
+  /* rotate to the default back and backface hidden */
+  backface-visibility: hidden;
+  height: 100%;
+  border-radius: 20px;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  padding: 20px 0px;
+
+
+}
+
+/* elements styling */
+.flip-card .main-conatiner .back-card h2 {
+  color: var(--blue);
+  text-align: center;
+  padding: 05px;
+
+
+}
+
+.flip-card .main-conatiner .back-card p {
+  color: rgb(0, 0, 0);
+  padding: 10px 05px;
+
+}
+
+.flip-card .main-conatiner .back-card h4 {
+  padding: 05px 10px;
+
+  color: rgb(68, 68, 68);
+}
+
+.flip-card .main-conatiner .back-card h3 {
+  /* margin-top: 30px; */
+  padding-top: 20px;
+  text-align: center;
+
+}
+
+.flip-card .main-conatiner .back-card h3 a {
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  background-color: var(--blue);
+}
+
+/* flip card section ends */
+/* guide section starts */
+.Guide-section {
+  width: 100%;
+  ;
+  background-color: var(--bg2);
+  padding: 50px 10px;
+}
+
+/* guide section of h2 */
+
+.Guide-section h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: cadetblue;
+}
+
+/* guide section conatiner2 */
+.Guide-section .container2 h2 {
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 05px 0px;
+  text-align: center;
+}
+
+.Guide-section p {
+  color: white;
+
+}
+
+.Guide-section .container2 p {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  padding: 05px 0px;
+}
+
+.Guide-section h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.Guide-section i {
+  color: rgb(255, 213, 0);
+  font-size: 15px;
+  padding: 05px 0px;
+}
+
+/*Guide-section main-conatiner  */
+.Guide-section .main-conatiner {
+  /* display: flex;
+   justify-content: center;
+   align-items: center; */
+  width: 300px;
+  height: 350px;
+  position: relative;
+  border: 1px solid;
+  background-color: rgba(255, 0, 242, 0.603);
+  border-radius: 20px;
+
+
+
+
+}
+
+/* whole div */
+.Guide-section .wholecontainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 20px;
+  gap: 20px
+}
+
+.Guide-section .main-conatiner .container1 {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+
+  border-radius: 20px;
+
+
+}
+
+/* img of guide which give 70% of size beacause of hover method */
+.Guide-section .main-conatiner .container1 img {
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+  transition: all 1s;
+  border-radius: 20px;
+
+
+
+}
+
+/* guide section of contanier2 */
+.Guide-section .main-conatiner .container2 {
+  position: absolute;
+  bottom: 0%;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  /* height: 100px; */
+  padding: 10px;
+  text-align: center;
+  transition: all 2s;
+  border-radius: 0px 0px 20px 20px;
+
+
+}
+
+/* hover on main conatiner the container1 will opacity will 30% */
+.Guide-section .main-conatiner:hover .container1 img {
+  height: 100%;
+  transition: all 1s;
+  opacity: 30%;
+}
+
+/* the .container2 will have the background color of saturated */
+.Guide-section .main-conatiner:hover .container2 {
+  transition: all 2s;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.Guide-section .main-conatiner h4 {
+  /* margin-top: 30px; */
+  padding: 10px 0px;
+  text-align: center;
+
+
+}
+
+.Guide-section .main-conatiner h4 a {
+  padding: 08px 15px;
+  color: white;
+  border-radius: 20px;
+  background-color: var(--blue);
+}
+
+/* gallery */
+.gallery {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  background-color: var(--bg2);
+
+}
+
+.gallery h2 {
+  color: var(--blue);
+  width: 100%;
+  /* justify-content: center; */
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+/* whole conatiner which is grid as 7 rows and 7 columns */
+.gallery .wholecontainer {
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7);
+  gap: 05px;
+  width: min(100%, 1000px);
+  border-radius: 20px;
+  box-shadow: cadetblue 0px 0px 0px 3px;
+
+
+}
+
+/* flex the main to make it on center of the screen */
+.gallery .main-conatiner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 20px 50px 20px;
+
+
+}
+
+.gallery .main-conatiner h2 {
+  padding: 20px;
+}
+
+/* making the all div img 100% width and height */
+
+.gallery .wholecontainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+/* curveing the all four corners */
+.gallery .wholecontainer .container1 img {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.gallery .wholecontainer .container4 img {
+  border-radius: 0px 20px 0px 0px;
+}
+
+.gallery .wholecontainer .container6 img {
+  border-radius: 0px 0px 20px 0px;
+}
+
+/* allocate the each container by using grid row strat and end grid  */
+/* row na height 
+  column na width*/
+.gallery .wholecontainer .container1 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 9;
+  grid-column-end: 3;
+
+}
+
+/* .gallery .wholecontainer figure{
+  position: relative;
+} */
+
+
+/* .gallery .wholecontainer figure .sub-conatiner{
+
+  position: absolute;
+  top:0;
+  left:05%
+
+} */
+
+.gallery .wholecontainer .container2 {
+
+  grid-row-start: 1;
+  grid-column-start: 3;
+  grid-row-end: 5;
+  grid-column-end: 6;
+
+}
+
+.gallery .wholecontainer .container3 {
+
+  grid-row-start: 5;
+  grid-column-start: 3;
+  grid-row-end: 9;
+  grid-column-end: 5;
+
+}
+
+.gallery .wholecontainer .container4 {
+
+  grid-row-start: 1;
+  grid-column-start: 6;
+  grid-row-end: 5;
+  grid-column-end: 9;
+
+
+}
+
+.gallery .wholecontainer .container5 {
+
+
+  grid-row-start: 5;
+  grid-column-start: 5;
+  grid-row-end: 9;
+  grid-column-end: 6;
+}
+
+.gallery .wholecontainer .container6 {
+  grid-row-start: 5;
+  grid-column-start: 6;
+  grid-row-end: 9;
+  grid-column-end: 9;
+}
+
+/* user feedback section */
+.user-feedback {
+  width: 100%;
+  background-image: url(./image2/maldives-1993704.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+  /* height: 100vh; */
+  /* background-color: var(--bg2); */
+
+}
+
+.user-feedback .wholecontainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid; */
+  padding-bottom: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+
+}
+
+.user-feedback .main-conatiner {
+  display: flex;
+
+  flex-direction: column;
+  width: 300px;
+  /* height: 300px; */
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.user-feedback .main-conatiner .container-1 {
+  display: flex;
+
+  justify-content: space-between;
+  width: 100%;
+
+
+
+}
+
+.user-feedback .main-conatiner .container-1 .sub-conatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  /* gap: 10px; */
+}
+
+.user-feedback .main-conatiner .container-1 .sub-conatiner img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.user-feedback .main-conatiner .container-1 .sub-conatiner div {
+  padding: 0px 10px;
+}
+
+.user-feedback .main-conatiner .container-2 {
+  width: 100%;
+
+  padding: 10px;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.user-feedback h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+
+
+}
+
+.user-feedback h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  margin: 0;
+  text-align: center;
+
+}
+
+/* SERVICE RATING */
+.user-feedback .service {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid; */
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+
+}
+
+.user-feedback .counter1 {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.user-feedback .counter1 .counter1-subconatiner1 {
+  height: 50%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+  background-color: white;
+}
+
+.user-feedback .counter1 .counter1-subconatiner1 span {
+  font-size: 70px;
+  font-weight: bolder;
+  color: var(--blue);
+
+}
+
+
+.user-feedback .counter1 .counter1-subconatiner2 {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+  border-radius: 0px 0px 20px 20px;
+  background-color: var(--blue);
+
+}
+
+.user-feedback .counter1 .counter1-subconatiner2 p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+}
+
+/* sponsors */
+.user .sponsors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.user .sponsors div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: auto;
+
+  margin: 10px;
+  width: 170px;
+}
+
+.user .sponsors div img {
+  height: inherit;
+  width: inherit;
+  object-fit: contain;
+  opacity: 30%;
+}
+
+.user .sponsors div:nth-child(2) img {
+  margin-top: 20px;
+}
+
+.user h2 {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* user details  */
+.user {
+  position: relative;
+}
+
+/* flexing the user container on center */
+.user .containerbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px;
+  background-image: url(./image2/opera-house-3381786.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+}
+
+/* heading of user box */
+.feedheading {
+  position: absolute;
+  top: 04%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: start;
+  color: white;
+  padding: 05px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+/* user containerbox container1 */
+.user .containerbox .container1 {
+  width: 40%;
+  height: 500px;
+  background-color: white;
+
+}
+
+.user .containerbox .container1 iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.user .containerbox .container2 {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 20px;
+  background-color: white;
+}
+
+/* making the input relative to amke the name in and out */
+.user .containerbox .container2 .inputBox {
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  /* background-color: aqua; */
+  border-bottom: 1px solid #161616;
+  /* border: 2px solid black; */
+
+}
+
+/* making the label inside the box of the input */
+
+.user .containerbox .container2 .inputBox label {
+
+  position: absolute;
+  font-size: larger;
+  font-weight: bolder;
+  z-index: 2;
+  left: 0px;
+  transition: all 1s;
+  top: 30px;
+
+
+}
+
+.user .containerbox .container2 .inputBox input {
+
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  outline: none;
+  border: none;
+
+
+}
+
+.user .containerbox .container2 .inputBox .Feedbacks {
+  width: 100%;
+  /* height: 100%; */
+
+}
+
+/* submit button */
+.user .containerbox .container2 input[type="submit"] {
+  color: rgb(255, 255, 255);
+  /* font-size: large; */
+  background-color: var(--blue);
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: min(100%, 200px);
+
+}
+
+/* when the user click or focus on the input box the name of the input will top 0 */
+.user .containerbox .container2 .inputBox input:focus~label {
+  top: 0px;
+  font-size: medium;
+  color: #3a3a3a;
+}
+
+/* when user enter any data on input box the name may come back to position so to avoid that in valid also the name will be in topn of the input */
+.user .containerbox .container2 .inputBox input:valid~label {
+  top: 0px;
+  color: #3b3b3b;
+  font-size: medium;
+}
+
+/* footer */
+/* making the footer flex */
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  padding: 30px 0px 10px 30px;
+  /* background-image: url(./image2/Destination-pana.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+background-attachment: fixed;
+background-position-y: -100px;
+background-position-x: -100px;
+background-color: white; */
+
+
+}
+
+.main-footer div {
+  width: 300px;
+
+
+}
+
+.main-footer ul {
+  list-style: none;
+
+
+}
+
+.main-footer .cl {
+
+  color: var(--blue);
+}
+
+.main-footer li {
+  padding: 10px;
+}
+
+.main-footer h3 {
+  color: rgb(0, 0, 0);
+  padding: 20px 10px 10px 10px;
+  text-decoration: underline 2px solid black;
+}
+
+.main-footer i {
+  padding: 05px;
+}
+
+/* copyright */
+.Copyright {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-image: linear-gradient(30deg, rgb(0, 255, 208), rgb(0, 191, 255), rgb(1, 255, 98));
+  /* padding: 10px 0px 30px 0px; */
+  padding: 20px;
+}
+
+/* scroll home right side fixed */
+.fa-earth-africa {
+
+  padding: 15px;
+  font-size: 40px;
+  border: 1px solid balck;
+  text-align: center;
+  color: rgb(0, 247, 255);
+  position: fixed;
+  bottom: 09%;
+  right: 04%;
+  animation: topscroll 5s linear;
+  z-index: 550;
+
+}
+
+
+@keyframes topscroll {
+  0% {
+    right: -10%;
+    opacity: 0;
+
+  }
+
+  100% {
+    right: 04%;
+    opacity: 1;
+
+  }
+
+}
+@media (min-width: 320px) and (max-width: 870px) {
+  header nav {
+    width: 94%;
+    left: 03%;
+    padding: 10px;
+  }
+
+  nav .container1 h1 {
+    margin-left: 10px;
+  }
+
+  .fly {
+    display: none;
+  }
+
+  header nav .container2 input[type="checkbox"]:checked~.slider {
+    left: 0;
+  }
+
+  header nav .container3 .fa-bars-staggered {
+    display: block;
+  }
+
+  header nav .container2 ul {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    left: -200%;
+    top: 110%;
+    transition: all 2s ease-out;
+    /* left: 0; */
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 10px;
+    color: black;
+  }
+
+  header nav .container2 ul li {
+    margin: 30px 0px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  header nav .container2 ul li a {
+    color: black;
+    margin: 20px;
+    line-height: 20px;
+    text-shadow: 0 0 rgb(255, 255, 255), 0 50px rgb(13, 247, 255);
+    transition: all 0.4s;
+    width: 100%;
+  }
+
+  header nav .container2 ul li a:hover {
+    overflow: hidden;
+    color: rgb(13, 247, 255);
+    text-shadow: 0 -27px rgb(255, 255, 255), 0 0 rgb(13, 247, 255);
+  }
+
+  header nav .container3 input[type="checkbox"]:checked~.search {
+    padding-left: 05px;
+  }
+
+  header nav .container3 i {
+    margin: 0px 05px;
+  }
+
+  header nav .container3 .fa-heart {
+    display: none;
+  }
+
+  header nav .container3 .fa-user-circle {
+    display: none;
+  }
+
+  .header-1 .container1 {
+    width: 80%;
+    transform: translate(05%, -50%);
+    top: 50%;
+  }
+
+  .header-1 .container1 span a img {
+    position: absolute;
+    z-index: 200;
+    width: 30px;
+    height: 30px;
+    top: 0%;
+    left: 500%;
+    animation: trvelbuttonflight2 6s;
+    animation-delay: 5s;
+
+  }
+
+  .header-1 .container1 h1 {
+    font-size: 40px;
+  }
+
+  .header-1 .container1 span {
+    padding: 05px 0px;
+  }
+
+  .header-1 .container2 {
+    left: 05%;
+    top: 80%;
+  }
+
+  header nav .container1 {
+    margin-right: 10px;
+  }
+
+  header nav .container1 h1 {
+    white-space: nowrap;
+  }
+
+  .header-1 .container1 span a {
+    color: white;
+    padding: 05px;
+    border-radius: 05px;
+    background-color: var(--blue);
+  }
+
+  section.banner-section {
+    padding: 10px;
+  }
+
+  .banner-section .banner-1 {
+    flex-wrap: wrap;
+  }
+
+  .banner-section .banner-1 {
+    flex-direction: column;
+    padding: 10px;
+    margin: 50px 10px;
+  }
+
+  .banner-section .banner-2 {
+    flex-direction: column;
+    padding: 10px;
+    margin: 50px 10px;
+  }
+
+  .banner-section .container1 {
+    width: 100%;
+  }
+
+  .banner-section .container1 img {
+    padding: 0px;
+    height: 250px;
+  }
+
+  .banner-section .container2 {
+    width: 100%;
+    margin-top: 20px;
+    padding: 05px;
+  }
+
+  .Features-section {
+    flex-direction: column-reverse;
+    padding: 10px;
+  }
+
+  .Features-section .container1 {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .Features-section .container2 {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 20px 0px;
+  }
+
+  .videosection .wholecontainer {
+
+    height: 100vh;
+
+
+  }
+
+  .videosection .imgcontainer {
+    width: 70%;
+
+    height: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+  }
+
+  .videosection .imgcontainer .main-conatiner {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+
+
+  }
+
+  .videosection .imgcontainer .main-conatiner .container1 img {
+
+    width: 200px;
+    height: 200px;
+  }
+
+  .videosection .leftarrow {
+    top: 60%;
+    left: 10%;
+
+
+  }
+
+  .videosection .rightarrow {
+    top: 60%;
+    right: 10%;
+
+
+  }
+
+  .videosection .imgcontainer .main-conatiner:hover .container2 {
+    top: 33%;
+    transition: all 1s;
+  }
+
+  .flip-card {
+    height: auto;
+  }
+
+  .flip-card .main-conatiner {
+    width: min(100%, 600px);
+    perspective: 1500px;
+  }
+
+  .flip-card .main-conatiner .front-card {
+
+    border-radius: 10px;
+  }
+
+  .flip-card .main-conatiner .front-card img {
+    border-radius: 10px;
+  }
+
+  .flip-card .main-conatiner .back-card {
+
+    border-radius: 10px;
+  }
+
+  .Guide-section .main-conatiner {
+    width: min(100%, 600px);
+  }
+
+  .user .containerbox {
+    padding: 0px;
+  }
+
+  .main-footer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+
+
+  }
+
+  .main-footer h3 {
+    text-align: center;
+  }
+
+  .user .containerbox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 10px;
+
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .user .sponsors div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+  }
+
+  .user h2 {
+    margin: 0px;
+    font-size: 30px;
+  }
+
+  .user .feedheading {
+    top: 01%;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    padding: 05px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .user .containerbox .container1 {
+    width: min(100%, 300px);
+    height: 400px;
+
+  }
+
+  .user .containerbox .container2 {
+    width: min(100%, 300px);
+    height: 400px;
+
+  }
+
+  .user-feedback .main-conatiner {
+    width: min(100%, 600px);
+    margin: 20px 0px;
+  }
+
+  .user-feedback .service {
+
+    align-items: center;
+    justify-content: center;
+    /* width:100% */
+
+  }
+
+  .user-feedback .service .counter1 {
+    margin: 10px 0px;
+    padding: 0;
+  }
+
+  .user-feedback h3 {
+    padding: 10px;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .user-feedback h2 {
+    font-size: 30px;
+  }
+
+  .fa-earth-africa {
+
+    padding: 15px;
+    font-size: 40px;
+
+    text-align: center;
+
+    position: fixed;
+    bottom: 07%;
+    right: 8%;
+    border-radius: 20px;
+
+
+  }
+
+  .rotate-box {
+
+    height: 120px;
+    width: 120px;
+    position: fixed;
+    bottom: 01%;
+    right: 01%;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: rotate 2s linear infinite;
+    z-index: 500;
+    /* background-color: #ff2744; */
+    display: none;
+
+  }
+
+
+
+
+
+}
+
+@media (min-width: 870px) and (max-width: 1200px) {
+  header nav {
+    top: 20px;
+    left: 02%;
+    width: 96%;
+  }
+
+  .fly {
+    display: none;
+  }
+
+  header nav .container2 ul li {
+    margin: 0px 10px;
+    white-space: nowrap;
+
+  }
+
+  header nav .container1 h1 {
+    white-space: nowrap;
+
+  }
+
+  header nav .container1 {
+    margin-right: 10px;
+  }
+
+  header nav .container2 ul li a {
+    text-shadow: 0 0 rgb(255, 255, 255), 0 29px rgb(13, 247, 255);
+
+  }
+
+  .header-1 .container1 {
+    top: 55%;
+    font-weight: bolder;
+  }
+
+  .header-1 .container1 h1 {
+    font-size: 60px;
+
+
+  }
+
+
+  .header-1 .container2 {
+    bottom: 05%;
+  }
+
+  .videosection .imgcontainer {
+    top: 40%
+  }
+
+
+  .flip-card .wholecontainer {
+    flex-wrap: nowrap;
+  }
+
+  .Guide-section .wholecontainer {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+
+  .user-feedback .wholecontainer {
+    flex-wrap: nowrap;
+  }
+
+  .user .sponsors div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+
+    margin: 10px;
+    width: 150px;
+  }
+}
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .Features-section .container2 img {
+    width: 40%;
+    height: 150px;
+  }
+
+  .gallery h2 {
+    color: var(--blue);
+
+    width: 100%;
+    /* justify-content: center; */
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .gallery .main-conatiner {
+    padding: 0px 10px 30px 10px;
+  }
+
+  .gallery .main-conatiner .wholecontainer {
+    height: 200px;
+
+  }
+
+}
